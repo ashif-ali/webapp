@@ -1,5 +1,6 @@
 import { FaBars } from "react-icons/fa";
 import Logo from "./Logo";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -8,26 +9,28 @@ const Navbar = () => {
                 <Logo />
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <div className="navbar-nav">
-                        <a className="nav-item nav-link active" href="#">
-                            Home
-                        </a>
-                        <a className="nav-item nav-link" href="#">
-                            Features
-                        </a>
-                        <a className="nav-item nav-link" href="#">
-                            Pricing
-                        </a>
-                        <a className="nav-item nav-link" href="#">
-                            Disabled
-                        </a>
+                        <NavLink className="nav-link" to="/">
+                            Dashboard
+                        </NavLink>
+                        <NavLink className="nav-link" to="/new">
+                            New Expense
+                        </NavLink>
+                        <NavLink className="nav-link" to="/reports">
+                            Reports
+                        </NavLink>
                     </div>
                 </div>
             </div>
             <div className="d-flex" role="search">
-                <button className="btn stn-sm btn-outline-light">Login</button>
-                <button className="btn stn-sm btn-outline-light mx-1">
-                    Logout
-                </button>
+                <NavLink className="btn stn-sm btn-outline-light" to="/login">
+                    Login
+                </NavLink>
+                <NavLink
+                    className="btn stn-sm btn-outline-light mx-1"
+                    to="/register"
+                >
+                    Register
+                </NavLink>
                 <button
                     className="navbar-toggler"
                     type="button"

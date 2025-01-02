@@ -29,7 +29,7 @@ const App = () => {
                 <Route path="/new" element={<NewExpense />} />
 
                 {/* Route for viewing expense details */}
-                <Route path="/view" element={<ExpenseDetails />} />
+                <Route path="/view/:expenseId" element={<ExpenseDetails />} />
 
                 {/* Route for viewing and generating expense reports */}
                 <Route path="/reports" element={<ExpenseReports />} />

@@ -1,0 +1,50 @@
+import { FaBars } from "react-icons/fa";
+import Logo from "./Logo";
+
+const Navbar = () => {
+    return (
+        <nav className="navbar navbar-expand-lg">
+            <div className="container">
+                <Logo />
+                <a className="navbar-brand" href="#">
+                    MyApp
+                </a>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <div className="navbar-nav">
+                        <a className="nav-link" href="/">
+                            Dashboard
+                        </a>
+                        <a className="nav-link" href="/new">
+                            New Expense
+                        </a>
+                        <a className="nav-link" href="/reports">
+                            Reports
+                        </a>
+                    </div>
+                </div>
+                <div className="d-flex" role="search">
+                    <a className="btn btn-sm btn-outline-light" href="/login">
+                        Login
+                    </a>
+
+                    <button className="btn btn-sm btn-outline-light mx-1">
+                        Logout
+                    </button>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <FaBars color="white" />
+                    </button>
+                </div>
+            </div>
+        </nav>
+    );
+};
+
+export default Navbar;

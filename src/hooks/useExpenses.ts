@@ -4,7 +4,7 @@ import { getExpenses } from "../services/expense-service";
 
 const useExpenses = () => {
     const [expenses, setExpenses] = useState<Expense[]>([]);
-    const [error, setErrors] = useState<string | null>(null);
+    const [error, setErrors] = useState<string>("");
     const [isLoading, setLoader] = useState<boolean>(false);
 
     useEffect(() => {
